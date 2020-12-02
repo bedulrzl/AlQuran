@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderSolatCell" id="U6b-Vx-4bR" customClass="HeaderSolatCollectionReusableView" customModule="AlQuran" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-PM-oWx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="123"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="X3k-2p-cNH">
+                            <rect key="frame" x="16" y="16" width="288" height="91"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="1hC-5V-dVS">
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="37.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTU-oX-V1A">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="37.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pilih Tanggal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BhB-hA-2d8" customClass="DateTextField" customModule="AlQuran" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="53.5" width="288" height="37.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="dateFormat" value="yyyy-MM-dd"/>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="1hC-5V-dVS" secondAttribute="trailing" id="Crv-Mr-D8i"/>
+                                <constraint firstItem="1hC-5V-dVS" firstAttribute="leading" secondItem="X3k-2p-cNH" secondAttribute="leading" id="luT-9W-CbQ"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="X3k-2p-cNH" firstAttribute="leading" secondItem="tpd-PM-oWx" secondAttribute="leading" constant="16" id="3dS-aB-p3e"/>
+                        <constraint firstItem="X3k-2p-cNH" firstAttribute="centerX" secondItem="tpd-PM-oWx" secondAttribute="centerX" id="NkJ-al-LxE"/>
+                        <constraint firstItem="X3k-2p-cNH" firstAttribute="centerY" secondItem="tpd-PM-oWx" secondAttribute="centerY" id="cbc-Ye-2Jf"/>
+                        <constraint firstAttribute="bottom" secondItem="X3k-2p-cNH" secondAttribute="bottom" constant="16" id="kom-n5-iH8"/>
+                        <constraint firstAttribute="trailing" secondItem="X3k-2p-cNH" secondAttribute="trailing" constant="16" id="nMd-YK-xVE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="tpd-PM-oWx" secondAttribute="trailing" id="766-TY-hmK"/>
+                <constraint firstItem="tpd-PM-oWx" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="9fQ-mQ-yGJ"/>
+                <constraint firstAttribute="bottom" secondItem="tpd-PM-oWx" secondAttribute="bottom" id="QRU-MH-Z1G"/>
+                <constraint firstItem="tpd-PM-oWx" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="z1I-Jl-Mlw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="dateLabel" destination="BhB-hA-2d8" id="9Rd-is-5I6"/>
+                <outlet property="tanggalLabel" destination="RTU-oX-V1A" id="NVT-eU-neA"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="104.12946428571428"/>
+        </collectionReusableView>
+    </objects>
+</document>
